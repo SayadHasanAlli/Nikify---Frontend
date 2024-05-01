@@ -89,9 +89,9 @@ const ProductDetails = ({ product, products }) => {
                                 <div className="text-md font-semibold">
                                     Select Size
                                 </div>
-                                <div className="text-md font-medium text-black/[0.5] cursor-pointer">
+                                {/* <div className="text-md font-medium text-black/[0.5] cursor-pointer">
                                     Select Guide
-                                </div>
+                                </div> */}
                             </div>
                             {/* HEADING END */}
 
@@ -161,19 +161,14 @@ const ProductDetails = ({ product, products }) => {
                         </button>
                         {/* ADD TO CART BUTTON END */}
 
-                        {/* WHISHLIST BUTTON START */}
-                        <button className="w-full py-4 rounded-full border border-black text-lg font-medium transition-transform active:scale-95 flex items-center justify-center gap-2 hover:opacity-75 mb-10">
-                            Whishlist
-                            <IoMdHeartEmpty size={20} />
-                        </button>
-                        {/* WHISHLIST BUTTON END */}
-
                         <div>
                             <div className="text-lg font-bold mb-5">
-                                Product Details
+                                Description
                             </div>
                             <div className="markdown text-md mb-5">
-                                <ReactMarkdown>{p.description}</ReactMarkdown>
+                            Welcome to our shoe store! We have a wide selection of shoes for all occasions, from dress shoes to sneakers. Whether you're looking for a new pair of heels for a special event or a comfortable pair of shoes for everyday wear, we have something for everyone.
+We carry all the latest styles from all the top brands, so you're sure to find the perfect pair of shoes to match your taste. And our friendly and knowledgeable staff is always on hand to help you find the right size and style for your needs.
+So come on in and browse our selection today! You're sure to find the perfect pair of shoes for your next big event.
                             </div>
                         </div>
                     </div>

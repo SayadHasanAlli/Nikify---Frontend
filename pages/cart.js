@@ -4,11 +4,14 @@ import Link from "next/link";
 import Wrapper from "@/components/Wrapper";
 import CartItem from "@/components/CartItem";
 import { useSelector } from "react-redux";
+import { loadStripe } from "@stripe/stripe-js";
 
 import { makePaymentRequest } from "@/utils/api";
-import { loadStripe } from "@stripe/stripe-js";
+
+
+
 const stripePromise = loadStripe(
-    process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY
+    process.env.NEXT_PUBLIC_STRAPI_PUBLISHABLE_KEY
 );
 
 const Cart = () => {

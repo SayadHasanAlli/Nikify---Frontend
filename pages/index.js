@@ -2,10 +2,23 @@ import HeroBanner from "@/components/HeroBanner";
 import ProductCard from "@/components/ProductCard";
 import Wrapper from "@/components/Wrapper";
 import { fetchDataFromApi } from "@/utils/api";
+import { useEffect, useState } from "react";
 export default function Home({ products }) {
+
+    // const [data, setData] = useState(null);
+    // useEffect(()=>{
+    //     fetchProducts()
+    // }, [])
+
+    // const fetchProducts = async () =>{
+    //     const {data} = await fetchDataFromApi("/api/products")
+    //     setData(data);
+    // }
+
     return (
         <main>
             <HeroBanner />
+            {/* <h1>{products?.data?.[0]?.attributes?.name}</h1> */}
             <Wrapper>
                 {/* heading and paragaph start */}
                 <div className="text-center max-w-[800px] mx-auto my-[50px] md:my-[80px]">
@@ -13,9 +26,7 @@ export default function Home({ products }) {
                         Cushioning for Your Miles
                     </div>
                     <div className="text-md md:text-xl">
-                        A lightweight Nike ZoomX midsole is combined with
-                        increased stack heights to help provide cushioning
-                        during extended stretches of running.
+                    Nikefy: Your ultimate destination for trendy, high-performance footwear. Discover a fusion of style and innovation with our curated collection of Nike shoes, designed to elevate your every step. Step into comfort, durability, and style with Nikefy, where fashion meets functionality for the modern shoe enthusiast.
                     </div>
                 </div>
                 {/* heading and paragaph end */}

@@ -23,7 +23,7 @@ const Category = ({ category, products, slug }) => {
     );
 
     return (
-        <div className="w-full md:py-20 relative">
+        <div className="w-full md:py-20 relative ">
             <Wrapper>
                 <div className="text-center max-w-[800px] mx-auto mt-8 md:mt-0">
                     <div className="text-[28px] md:text-[34px] mb-5 font-semibold leading-tight">
@@ -92,7 +92,7 @@ export default Category;
 export async function getStaticPaths() {
     const category = await fetchDataFromApi("/api/categories?populate=*");
     const paths = category?.data?.map((c) => ({
-        params: {
+        params: { //key value is object
             slug: c.attributes.slug,
         },
     }));

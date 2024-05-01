@@ -18,13 +18,13 @@ const subMenuData = [
 
 const Menu = ({ showCatMenu, setShowCatMenu, categories }) => {
     return (
-        <ul className="hidden md:flex items-center gap-8 font-medium text-black">
+        <ul className="hidden md:flex items-center  gap-8 font-medium text-black">
             {data.map((item) => {
                 return (
                     <React.Fragment key={item.id}>
                         {!!item?.subMenu ? (
                             <li
-                                className="cursor-pointer flex items-center gap-2 relative"
+                                className="cursor-pointer flex items-center hover:font-bold gap-2 relative"
                                 onMouseEnter={() => setShowCatMenu(true)}
                                 onMouseLeave={() => setShowCatMenu(false)}
                             >
@@ -59,7 +59,7 @@ const Menu = ({ showCatMenu, setShowCatMenu, categories }) => {
                                 )}
                             </li>
                         ) : (
-                            <li className="cursor-pointer">
+                            <li className="cursor-pointer hover:font-bold">
                                 <Link href={item?.url}>{item.name}</Link>
                             </li>
                         )}
